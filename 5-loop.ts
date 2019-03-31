@@ -26,6 +26,7 @@ arr.forEach((value, index, array) => {
     console.log(value)
 })
 
+// every
 arr.every((value, index, array) => {
     console.log(value);
     return false;               // quit the iteration when return false
