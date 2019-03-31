@@ -48,3 +48,14 @@ class ChineseDriver extends Man {
 
 let jason4 = new ChineseDriver('宇盛', '周')
 jason4.drive()
+
+
+// 静态变量，静态方法
+class StaticChinese {
+    static region: string;
+    static greet():void {
+        console.log(`你好, 我来自${this.region}`)
+    }
+}
+StaticChinese.region = '中国'
+StaticChinese.greet()
