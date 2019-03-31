@@ -24,6 +24,10 @@ interface OptionalPerson {
     favoriteColor?: string; // This property is optional
 }
 
+let b: OptionalPerson = {
+    name: 'jason',
+    age: 26,
+}
 
 // enforce that a class meets a particular contract
 interface ClockInterface {
