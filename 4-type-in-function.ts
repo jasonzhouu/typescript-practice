@@ -1,5 +1,3 @@
-// 函数的参数类型
-
 // argument type
 const greeting = (person: string) => {
     console.log('Good day ' + person);
@@ -25,3 +23,11 @@ const sayHappyBirthdayOnFacebook = (name: string | null) => {
 sayHappyBirthdayOnFacebook(null); // => "Happy birthday!"
 sayHappyBirthdayOnFacebook('Jeremy'); // => "Happy birthday Jeremy!"
 
+// Optional function parameter
+function callMom(message?: string) {
+    if (!message) {
+        console.log('Hi mom. Love you. Bye.');
+    } else {
+        console.log(message);
+    }
+}

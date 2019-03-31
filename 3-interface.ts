@@ -15,3 +15,11 @@ let user: Person = {
 }
 
 greeter(user)
+
+
+// Interface describing an object containing an optional property
+interface Person {
+    name: string;
+    age: number;
+    favoriteColor?: string; // This property is optional
+}
