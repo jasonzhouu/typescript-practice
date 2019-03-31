@@ -11,7 +11,8 @@ var array2: Array<string> = ['rocket', 'fluffly'];
 let whoknows: any = 4;
 whoknows = 'a beautiful string';
 
-// 先定义类型，然后声明变量时可以指定这个类型
+
+// 定义类型
 type Animal = {
     kind: string;
     weight: number;
@@ -22,6 +23,20 @@ let dog: Animal = {
     weight: 10,
 }
 
+// 综合类型
+type Student = {
+    id: string;
+    age: number;
+};
+type Employee = {
+    companyId: string;
+};
+let person: Student & Employee = {
+    age: 21,
+    companyId: 'SP302334',
+    id: '10033402',
+};
+console.log(person);
 
 
 // 如果这个类型只用一次，可以在声明变量时直接指定
@@ -34,15 +49,3 @@ dog2 = {
     kind: 'mammal',
     weight: 10,
 }
-
-
-// 函数的参数类型
-const greeting = (person: string) => {
-    console.log('Good day ' + person);
-}
-greeting('Jason');
-
-const noReturn = (): void => {
-    console.log('no return')
-}
-noReturn()
