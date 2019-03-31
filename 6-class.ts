@@ -16,6 +16,8 @@ let jason = new Person('Jason', 'Zhou');
 jason.getName();
 console.log(jason.firstName)
 
+var isPerson = jason instanceof Person;
+console.log(`Is ${jason.firstName} a person? ${isPerson}`)
 
 // 继承
 class Man extends Person {
