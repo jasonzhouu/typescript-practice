@@ -61,3 +61,18 @@ class StaticChinese {
 }
 StaticChinese.region = '中国'
 StaticChinese.greet()
+
+
+// private item
+class Encapsulate extends Person {
+    private fullName: string = 'Jason Zhou';
+    private getFullName():void {
+        console.log(this.fullName)
+    }
+    getName(): void {
+        console.log('my name is:')
+        this.getFullName()
+    }
+}
+var jason5 = new Encapsulate('Jason', 'Zhou')
+jason5.getName()
