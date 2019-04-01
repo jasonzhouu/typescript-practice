@@ -76,3 +76,29 @@ class Encapsulate extends Person {
 }
 var jason5 = new Encapsulate('Jason', 'Zhou')
 jason5.getName()
+
+
+// getter, setter
+let passcode = 'secret passcode'
+class Employee {
+    private _fullName: string;
+
+    get fullName(): string {
+        return this._fullName
+    }
+
+    set fullName(newName: string) {
+        if(passcode && passcode == 'secret passcode') {
+            this._fullName = newName
+        }
+        else {
+            console.log("error: unauthorized update of employee!")
+        }
+    }
+}
+
+let employee = new Employee();
+employee.fullName = "jason zhou"
+if(employee.fullName) {
+    console.log(employee.fullName)
+}
